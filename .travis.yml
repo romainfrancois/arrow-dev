@@ -15,7 +15,7 @@ matrix:
 addons:
   apt:
     sources:
-      - sourceline: 'deb https://dl.bintray.com/apache/arrow/ubuntu xenial main/'
+      - sourceline: 'deb [arch=amd64] https://dl.bintray.com/apache/arrow/ubuntu xenial main/'
         key_url: 'https://dist.apache.org/repos/dist/dev/arrow/KEYS'
       - sourceline: 'deb http://apt.llvm.org/xenial lvm-toolchain-xenial-7 main/'
         key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
