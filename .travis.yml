@@ -1,0 +1,24 @@
+language: r
+cache: packages
+latex: false
+fortran: false
+
+matrix:
+  include:
+    - dist: xenial
+    - os: osx
+      brew_packages: apache-arrow
+    - os: osx
+      osx_image: xcode7.3
+      disable_homebrew: true
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'deb https://dl.bintray.com/apache/arrow/ubuntu xenial main/'
+        key_url: 'https://dist.apache.org/repos/dist/dev/arrow/KEYS'
+      - sourceline: 'deb http://apt.llvm.org/xenial lvm-toolchain-xenial-7 main/'
+        key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
+    packages:
+      - libarrow-dev
+      - libparquet-dev
