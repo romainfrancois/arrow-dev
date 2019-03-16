@@ -14,7 +14,8 @@ matrix:
 
 addons:
   apt:
+    update: true
     sources:
-      - sourceline: 'deb [arch=amd64] http://dl.bintray.com/apache/arrow/ubuntu xenial main/'
+      - sourceline: 'deb [arch=amd64] http://dl.bintray.com/apache/arrow/ubuntu xenial main'
         key_url: 'https://dist.apache.org/repos/dist/dev/arrow/KEYS'
-    packages: '--allow-unauthenticated libarrow-dev libparquet-dev'
+    packages: 'libarrow-dev libparquet-dev'
